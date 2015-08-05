@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+	android:id="@+id/rl_sav_anm_id"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	tools:context=".SaveAnmActivity" >
+
+	<EditText
+		android:id="@+id/sav_tags"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:hint="@string/sav_tag_hint"
+		android:inputType="text"
+		android:imeOptions="actionSend" 
+		android:onClick="onClick"
+		android:clickable="true"/>
+
+	<LinearLayout 
+		android:id="@+id/sav_tag"
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+		android:layout_below="@id/sav_tags"
+		android:orientation="vertical"
+		android:background="#00ffffff">
+
+		<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+			android:id="@+id/sav_scroll"
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent"
+			android:scrollbars="vertical" 
+			android:layout_below="@id/sav_tags"
+			android:scrollbarStyle="insideOverlay">
+
+			<TableLayout
+				xmlns:android="http://schemas.android.com/apk/res/android"
+				android:id="@+id/tl_tgs"
+				android:layout_below="@id/sav_tags"
+				android:layout_width="fill_parent"
+				android:layout_height="fill_parent"
+				android:shrinkColumns="*" 
+				android:stretchColumns="*"
+				android:weightSum="4"	
+				android:background="#00ffffff">
+			</TableLayout>
+		</ScrollView>	
+	</LinearLayout>		
+
+</RelativeLayout>

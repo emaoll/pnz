@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+	android:id="@+id/tg_anm_id"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	tools:context=".FindTagsActivity" >
+
+	<EditText
+		android:id="@+id/ed_tgs"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:hint="@string/ed_tag_hint"
+		android:inputType="text"
+		android:imeOptions="actionSend" 
+		android:onClick="onClick"
+		android:clickable="true"/>
+
+	<LinearLayout 
+		android:id="@+id/ll_tag"
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+		android:orientation="vertical"
+		android:layout_below="@id/ed_tgs"
+		android:background="#00ffffff">
+
+		<TableLayout
+			xmlns:android="http://schemas.android.com/apk/res/android"
+			android:id="@+id/tl_tag"
+			android:layout_below="@id/ed_tgs"
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent"
+			android:shrinkColumns="*" 
+			android:stretchColumns="*"
+			android:weightSum="4"	
+			android:background="#00ffffff">
+		</TableLayout>
+	</LinearLayout>
+</RelativeLayout>
